@@ -157,6 +157,3 @@ a couple manual changes within `index.html` i found needed to be made so far:
     - simple account profiles layout
 - Chrome Cast modal screen
 
-<p align="left">
-  <img alt="screen grab of netflix clone" src=".gh-assets/expo-netflix-0.0.1.gif" width="320" />
-</p>

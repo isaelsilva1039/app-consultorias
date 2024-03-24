@@ -12,8 +12,9 @@ import { colors, device, fonts, gStyle, images } from '../constants';
 
 // components
 import TouchText from './TouchText';
+import { API_URL, BASE_URL } from '../constants/base';
 
-function HeaderHome({ all, show }) {
+function HeaderHome({ all, show, capaEmpresa, logoEmpres }) {
   const navigation = useNavigation();
 
   // local state
@@ -35,33 +36,38 @@ function HeaderHome({ all, show }) {
     }
   }, [show]);
 
+
   return (
     <Animated.View style={[styles.container, { top }]}>
       <TouchableOpacity
         activeOpacity={gStyle.activeOpacity}
         onPress={() => navigation.navigate('Home')}
       >
-        <Image source={images.netflixTransparent} style={styles.logo} />
+        <Image source={{uri: BASE_URL + logoEmpres}} style={styles.logo} />
       </TouchableOpacity>
 
       <View style={styles.containerMenu}>
         {all && (
           <React.Fragment>
+            
             <TouchText
               onPress={() => navigation.navigate('TvShows')}
-              text="TV Shows"
+              text="Sobre nós"
               textStyle={styles.text}
             />
+            
             <TouchText
               onPress={() => navigation.navigate('Movies')}
-              text="Movies"
+              text="Nosso site"
               textStyle={styles.text}
             />
+            
             <TouchText
               onPress={() => navigation.navigate('MyList')}
-              text="My List"
+              text="Saiba mais"
               textStyle={styles.text}
             />
+
           </React.Fragment>
         )}
       </View>

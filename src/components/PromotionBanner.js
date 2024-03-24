@@ -10,19 +10,21 @@ import TouchTextIcon from './TouchTextIcon';
 import SvgCheck from '../icons/Svg.Check';
 import SvgInfo from '../icons/Svg.Info';
 import SvgPlus from '../icons/Svg.Plus';
+import { BASE_URL } from '../constants/base';
 
-function PromotionBanner() {
+function PromotionBanner({capaEmpresa}) {
   // local state
   const [added, setAdded] = React.useState(false);
   const icon = added ? <SvgCheck /> : <SvgPlus />;
 
   return (
     <ImageBackground
-      source={images.bannerBander}
+      source={{uri:BASE_URL + capaEmpresa}}
       style={styles.imageBackground}
     >
       <View style={styles.containerContent}>
-        <Image source={images.logoBander} style={styles.image} />
+        {/* Pensaremos depois se isso aqui vai da certo para adicionarmos icones persnalisados, por exemplo nome da empresa */}
+        {/* <Image source={images.logoBander} style={styles.image} /> */}
 
         <View style={gStyle.flexRowSpace}>
           <TouchTextIcon
