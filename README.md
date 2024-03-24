@@ -1,13 +1,5 @@
 # Netflix: UI Clone with React Native / Expo
 
-web demo: [Expo Netflix](https://expo-netflix.vercel.app)
-
-[![follow @calebnance](https://img.shields.io/twitter/follow/calebnance.svg?style=for-the-badge&logo=TWITTER&logoColor=FFFFFF&labelColor=00aced&logoWidth=20&color=lightgray)](https://twitter.com/calebnance)
-
-<p align="center">
-  <img alt="netflix screens" src=".gh-assets/screenshare-6.png" />
-</p>
-
 ## Table of Contents
 
 - [Install & Build](#install--build)
